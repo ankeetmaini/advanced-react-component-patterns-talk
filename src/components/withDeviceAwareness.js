@@ -1,7 +1,10 @@
 import React from "react";
+import hoistNonReactStatics from "hoist-non-react-statics";
 
-const withDeviceAwareness = Component =>
+const withDeviceAwareness = Component => {
   class WithDeviceAwareness extends React.Component {
+    static displayName = `WithDeviceAwareness(${Component.name})`;
+
     state = {
       isMobile: false
     };
@@ -25,8 +28,16 @@ const withDeviceAwareness = Component =>
     };
 
     render() {
-      return <Component isMobile={this.state.isMobile} />;
+      const { innerRef, ...props } = this.props;
+      return (
+        <Component {...props} ref={innerRef} isMobile={this.state.isMobile} />
+      );
     }
-  };
+  }
+
+  // statics
+  // WithDeviceAwareness.getSomething = Component.getSomething;
+  return hoistNonReactStatics(WithDeviceAwareness, Component);
+};
 
 export default withDeviceAwareness;
