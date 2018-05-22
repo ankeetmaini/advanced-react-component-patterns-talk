@@ -1,31 +1,10 @@
 import React from "react";
 
-export default class ResponsiveFeature extends React.Component {
-  state = {
-    isMobile: false
-  };
+import withDeviceAwareness from "./components/withDeviceAwareness";
 
-  componentDidMount() {
-    this.calculate();
-
-    window.addEventListener("resize", this.calculate);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.calculate);
-  }
-
-  calculate = () => {
-    if (window.innerWidth > 1200) {
-      this.setState({ isMobile: false });
-      return;
-    }
-
-    this.setState({ isMobile: true });
-  };
-
+class ResponsiveFeature extends React.Component {
   render() {
-    const isMobile = this.state.isMobile;
+    const isMobile = this.props.isMobile;
     return (
       <div
         className="responsiveDiv"
@@ -36,3 +15,5 @@ export default class ResponsiveFeature extends React.Component {
     );
   }
 }
+
+export default withDeviceAwareness(ResponsiveFeature);
