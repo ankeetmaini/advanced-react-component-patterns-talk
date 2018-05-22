@@ -1,3 +1,12 @@
 a {
   padding: 10px;
 }
+
+.backToTop {
+  position: fixed;
+  padding: 10px;
+  right: 48%;
+  bottom: 30px;
+  background: blue;
+  color: white;
+}
