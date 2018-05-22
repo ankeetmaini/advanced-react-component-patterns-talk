@@ -10,3 +10,7 @@ a {
   background: blue;
   color: white;
 }
+
+.responsiveDiv {
+  height: 60vh;
+}
