@@ -35,3 +35,9 @@ a {
 .false {
   color: red;
 }
+
+.margin5 {
+  margin-left: 50px;
+  padding: 10px;
+  border: 1px solid #afafaf;
+}

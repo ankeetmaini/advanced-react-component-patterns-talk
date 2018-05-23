@@ -9,6 +9,8 @@ import ResponsiveFeature2 from "./responsive-feature-2";
 import HoCLikeABoss from "./hoc-like-a-boss";
 import BoringToggle from "./boring-toggle";
 import InterestingToggle from "./interesting-toggle";
+import Theme from "./yo-theme";
+import WowTheme from "./wow-theme";
 import "./app.css";
 
 class App extends React.Component {
@@ -31,6 +33,8 @@ class App extends React.Component {
             <Link to="/responsive-feature-new">responsive-feature-new</Link>
             <Link to="/boring-toggle">boring-toggle</Link>
             <Link to="/interesting-toggle">interesting-toggle</Link>
+            <Link to="/yo-theme">yo-theme</Link>
+            <Link to="/wow-theme">wow-theme</Link>
           </div>
           <Switch>
             <div style={{ margin: 20 }}>
@@ -52,6 +56,8 @@ class App extends React.Component {
               />
               <Route path="/boring-toggle" component={BoringToggle} />
               <Route path="/interesting-toggle" component={InterestingToggle} />
+              <Route path="/yo-theme" component={Theme} />
+              <Route path="/wow-theme" component={WowTheme} />
             </div>
           </Switch>
         </div>
