@@ -44,7 +44,7 @@ class App extends React.Component {
               <Route path="/hoc-like-a-boss" component={HoCLikeABoss} />
               <Route
                 path="/responsive-feature-new"
-                component={ResponsiveFeature2}
+                render={() => <ResponsiveFeature2 message="hi - again" />}
               />
             </div>
           </Switch>
