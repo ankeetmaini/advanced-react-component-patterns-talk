@@ -7,6 +7,7 @@ import Feature2 from "./feature-2";
 import ResponsiveFeature1 from "./responsive-feature-1";
 import ResponsiveFeature2 from "./responsive-feature-2";
 import HoCLikeABoss from "./hoc-like-a-boss";
+import BoringToggle from "./boring-toggle";
 import "./app.css";
 
 class App extends React.Component {
@@ -27,6 +28,7 @@ class App extends React.Component {
             <Link to="/responsive-feature">responsive-feature</Link>
             <Link to="/hoc-like-a-boss">hoc-like-a-boss</Link>
             <Link to="/responsive-feature-new">responsive-feature-new</Link>
+            <Link to="/boring-toggle">boring-toggle</Link>
           </div>
           <Switch>
             <div style={{ margin: 20 }}>
@@ -46,6 +48,7 @@ class App extends React.Component {
                 path="/responsive-feature-new"
                 render={() => <ResponsiveFeature2 message="hi - again" />}
               />
+              <Route path="/boring-toggle" component={BoringToggle} />
             </div>
           </Switch>
         </div>
