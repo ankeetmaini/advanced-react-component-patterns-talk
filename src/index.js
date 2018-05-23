@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter, Link } from "react-router-dom";
 import Feature1 from "./feature-1";
 import Feature2 from "./feature-2";
 import ResponsiveFeature1 from "./responsive-feature-1";
+import ResponsiveFeature2 from "./responsive-feature-2";
 import HoCLikeABoss from "./hoc-like-a-boss";
 import "./app.css";
 
@@ -25,6 +26,7 @@ class App extends React.Component {
             <Link to="/feature-2">feature-2</Link>
             <Link to="/responsive-feature">responsive-feature</Link>
             <Link to="/hoc-like-a-boss">hoc-like-a-boss</Link>
+            <Link to="/responsive-feature-new">responsive-feature-new</Link>
           </div>
           <Switch>
             <div style={{ margin: 20 }}>
@@ -40,6 +42,10 @@ class App extends React.Component {
                 )}
               />
               <Route path="/hoc-like-a-boss" component={HoCLikeABoss} />
+              <Route
+                path="/responsive-feature-new"
+                component={ResponsiveFeature2}
+              />
             </div>
           </Switch>
         </div>
